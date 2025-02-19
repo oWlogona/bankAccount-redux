@@ -1,22 +1,22 @@
 const CUSTOMER_CREATE_CUSTOMER = "customer/createCustomer";
 const CUSTOMER_UPDATE_CUSTOMER_NAME = "customer/updateCustomerName";
 
-export function createCustomer(fullname, nationID) {
+export function createCustomer(fullName, nationID) {
   return {
     type: CUSTOMER_CREATE_CUSTOMER,
     payload: {
-      fullname: fullname,
+      fullName: fullName,
       nationID: nationID,
       createdAt: new Date().toISOString(),
     },
   };
 }
 
-export function updateCustomerName(fullname) {
+export function updateCustomerName(fullName) {
   return {
     type: CUSTOMER_UPDATE_CUSTOMER_NAME,
     payload: {
-      fullname: fullname,
+      fullName: fullName,
     },
   };
 }
